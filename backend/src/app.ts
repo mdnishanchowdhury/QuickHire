@@ -15,17 +15,13 @@ app.use(cors({
 
 
 app.all('/api/auth/*splat', toNodeHandler(auth));
-// Enable URL-encoded form data parsing
 app.use(express.urlencoded({ extended: true }));
 
-// Middleware to parse JSON bodies
 app.use(express.json());
 app.use("/api", JobRoutes)
 app.use("/api", ApplicationsRoutes)
 
 
-
-// Basic route
 app.get('/', (req: Request, res: Response) => {
     res.send('Hello, TypeScript + Express!');
 });
