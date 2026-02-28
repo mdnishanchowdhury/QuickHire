@@ -15,7 +15,6 @@ const FeaturedJobs = () => {
           </a>
         </div>
 
-        {/* Job Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {jobData.map((job, index) => (
             <div key={index} className="border border-gray-200 p-6 hover:shadow-lg transition-shadow bg-white">

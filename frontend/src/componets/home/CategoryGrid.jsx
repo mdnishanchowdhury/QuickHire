@@ -39,7 +39,6 @@ const CategoryGrid = () => {
           </button>
         </div>
 
-        {/* Grid/List Container */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8">
           {categories.map((item) => {
             const isActive = activeId === item.id;
