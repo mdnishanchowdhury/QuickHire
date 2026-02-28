@@ -8,11 +8,12 @@ import { auth } from "./app/lib/auth";
 
 const app: Application = express();
 
-app.use(cors({
-    origin: process.env.APP_URL,
-    credentials: true
-}))
-
+app.use(
+  cors({
+    origin: "http://localhost:5173", // change this
+    credentials: true,
+  })
+);
 
 app.all('/api/auth/*splat', toNodeHandler(auth));
 app.use(express.urlencoded({ extended: true }));
